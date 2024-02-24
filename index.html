@@ -1,11 +1,70 @@
+<!-- Informational website for Glas Engineering LLC -->
+
+<!-- Images Attribution: -->
+<!-- Website background image downloaded from geralt on Pixabay.com. Link: https://pixabay.com/illustrations/digitization-transformation-binary-5194814/ -->
+<!-- Under construction image downloaded from Michael_Luenen on Pixabay.com. Link: https://pixabay.com/photos/construction-site-website-1561769/ -->
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Test Page</title>
+  <meta charset="UTF-8"/>
+  <meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <link href="styles.css" rel="stylesheet"/>
+  <!-- TO DO: Add company logo -->
+  <!-- <link href="images/icon.ico" rel="shortcut icon" type="image/x-icon"/>
+  <link href="images/icon.ico" rel="icon" type="image/x-icon"/> -->
+  <title>Glas Engineering</title>
 </head>
+
 <body>
-    <h1>Hello World!</h1>
+<div class="container">
+  <!--Section 1-->
+  <section class="section1 center" id="section1">
+      <h1 class="section1-heading center">Glas Engineering</h1>
+    <a class="section1-btn" href="#section3">Apps</a>
+  </section>
+
+  <!--Nav Bar-->
+  <nav class="navbar center">
+    <a class="navbar-link" href="#section1">Home</a>
+    <a class="navbar-link" href="#section2">About Us</a>
+    <a class="navbar-link" href="#section3">Apps</a>
+  </nav>
+
+  <!--Section 2-->
+  <section class="section2" id="section2">
+        <h1 class="section2-heading">About Us</h1>
+
+        <h2 class="section2-body">
+            &emsp;&emsp;Founded in 2024, Glas Engineering is a software development company focused on the publication of iOS apps related to the finance industry.
+            Our goal is to help individuals across the world become more knowledgeable about investing so that they can better achieve their financial goals.
+        </h2>
+  </section>
+
+  <!--Section 3-->
+  <section class="section3" id="section3">
+        <h1 class="section3-heading">Apps</h1>
+        <div class="apps-wrapper center">
+          <!--Apps-->
+          <div class="app">
+            <div class="app-text">
+              <h2 class="app-name">Crypto Portfolio Tracking/Analysis App</h2>
+              <h4 class="app-description">More details to come.</h4>
+            </div>
+            <img alt="A picture of a construction site sign." class="app-img" src="images/UnderConstruction.jpg"/>
+            <a class="app-link" href="#" target="">Check back soon!</a>
+          </div>
+        </div>
+  </section>
+
+  <!--Section 4-->
+  <footer class="section4" id="section4">
+      <p class="release-date">
+          &copy 2024 Glas Engineering LLC. Last updated February 2024.
+      </p>
+  </footer>
+</div>
+<script src="script.js"></script>
 </body>
 </html>

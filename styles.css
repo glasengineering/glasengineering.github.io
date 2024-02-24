@@ -1,0 +1,277 @@
+@charset "ISO-8859-1";
+@import url("https://fonts.googleapis.com/css?family=Lato&display=swap");
+
+:root {
+    --primaryColor: #2fa7a1;
+    --primaryColorTransparent: rgba(47, 167, 161, 0.90);
+    --primaryTextColor: rgba(255, 255, 255, 0.90);
+    --backgroundColor: rgba(245, 245, 245, 0.90);
+    --shadowColor: rgba(75, 75, 75, 0.90);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    outline: none;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style-type: none;
+    font-family: "Lato", sans-serif;
+    font-weight: 400;
+}
+
+html {
+    scroll-behavior: smooth;
+    font-size: calc(15px + 0.390625vw);
+}
+
+.center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.section1 {
+    width: 100vw;
+    height: 100vh;
+    background: url(/images/Background.jpg) repeat-x;
+    background-size: cover;
+    overflow: auto;
+    animation: movingBackground 300s linear infinite;
+    flex-direction: column;
+}
+
+.section1-heading {
+    font-size: 4rem;
+    font-weight: 800;
+    color: var(--primaryTextColor);
+    margin: 3.5vh 3.5vw;
+    letter-spacing: 0.30rem;
+    text-shadow: 0.20rem 0.20rem 0 var(--shadowColor);
+    transform: skew(-10deg);
+}
+
+.section1-btn {
+    font-size: 1rem;
+    font-weight: 800;
+    color: rgb(0, 0, 0);
+    background-color: var(--backgroundColor);
+    border: 0.15rem solid #333;
+    padding: 0.25rem;
+    text-transform: uppercase;
+    letter-spacing: 0.15rem;
+}
+
+.section1-btn:hover {
+    font-weight: bold;
+    color: var(--primaryTextColor);
+    background-color: var(--primaryColorTransparent);
+    text-shadow: 0.03rem 0.03rem 0 var(--shadowColor);
+    scale: 110%;
+    transition: all 0.3s ease-in-out;
+}
+
+.navbar {
+    width: 100vw;
+    height: 2rem;
+    background-color: var(--primaryColor);
+    box-shadow: 0.15rem 0.15rem 0.3rem #777;
+    position: absolute;
+    z-index: 300;
+}
+
+.sticky {
+    position: fixed;
+    top: 0;
+    transition: all 0.3s ease-in-out;
+}
+
+.navbar-link {
+    font-size: 1rem;
+    font-weight: 600;
+    color: rgb(0, 0, 0);
+    margin: 0 3vw;
+    letter-spacing: 0.15rem;
+}
+
+.change.navbar-link {
+    color: #fff;
+    text-shadow: 0.025rem 0.025rem 0 var(--shadowColor);
+}
+
+.navbar-link:hover {
+    content: "";
+    scale: 110%;
+    color: #fff;
+    font-weight: bold;
+    text-shadow: 0.025rem 0.025rem 0 var(--shadowColor);
+    transition: all 0.3s ease-in-out;
+}
+
+.change.navbar-link::before {
+    color: #fff;
+    scale: 110%;
+    font-weight: bold;
+    text-shadow: 0.025rem 0.025rem 0 var(--shadowColor);
+    transition: all 0.3s ease-in-out;
+}
+
+.section2 {
+    width: 100vw;
+    height: auto;
+    background-color: var(--backgroundColor);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.section2-heading {
+    margin-top: 10vh;
+    font-size: 2rem;
+    color: rgb(0, 0, 0);
+    letter-spacing: 0.15rem;
+    border-bottom: 0.15rem solid #333;
+}
+
+.section2-body {
+    margin: 4vh 3vw;
+    font-size: 1.25rem;
+    color: rgb(0, 0, 0);
+}
+
+.text-emphasize {
+    color: var(--primaryColor);
+    font-weight: bold;
+}
+
+.section3 {
+    width: 100vw;
+    height: auto;
+    background-color: var(--backgroundColor);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.section3-heading {
+    margin: 6vh 0 4vh 0;
+    font-size: 2rem;
+    color: rgb(0, 0, 0);
+    letter-spacing: 0.15rem;
+    border-bottom: 0.15rem solid #333;
+}
+
+.apps-wrapper {
+    width: 90vw;
+    flex-wrap: wrap;
+    margin-bottom: 10vh;
+}
+
+.app {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 1vh 1vw;
+    background-color: var(--backgroundColor);
+    box-shadow: 0.2rem 0.2rem 0.3rem #777;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.5s ease-in-out;
+}
+
+.app:hover {
+    box-shadow: 0.4rem 0.4rem 0.3rem #777;
+}
+
+.app-text {
+    text-align: center;
+    letter-spacing: 0.1rem;
+    position: absolute;
+    top: -10rem;
+    z-index: 10;
+    transition: all 0.3s ease-in-out;
+}
+
+.app:hover .app-text {
+    top: 2rem;
+    transition: all 0.3s ease-in-out;
+}
+
+.app-name {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: rgb(0, 0, 0);
+    text-transform: capitalize;
+}
+
+.app-description {
+    font-size: 1rem;
+    color: var(--primaryColor);
+}
+
+.app-img {
+    width: 22.5rem;
+    transition: all 0.3s ease-in-out;
+}
+
+.app:hover .app-img {
+    opacity: 0.10;
+}
+
+.app-link {
+    font-size: 1rem;
+    font-weight: 500;
+    color: rgb(0, 0, 0);
+    letter-spacing: 0.1rem;
+    border: 0.3rem solid var(--primaryColor);
+    padding: 1rem;
+    background-color: var(--backgroundColor);
+    position: absolute;
+    bottom: -5rem;
+    transition: bottom 0.3s ease-in-out;
+}
+
+.app:hover .app-link {
+    bottom: 5rem;
+    transition: bottom 0.3s ease-in-out;
+}
+
+.app-link:hover {
+    font-weight: bold;
+    background-color: var(--primaryColorTransparent);
+    color: #fff;
+    text-shadow: 0.025rem 0.025rem 0 var(--shadowColor);
+    scale: 110%;
+    transition: all 0.3s ease-in-out;
+}
+
+.section4 {
+    width: 100vw;
+    height: auto;
+    background-color: #1c1c1c;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.release-date {
+    color: #aaa;
+    font-size: 1rem;
+    letter-spacing: 0.15rem;
+    font-weight: 300;
+    text-align: center;
+    margin: 1rem;
+}
+
+@keyframes movingBackground {
+    from {
+        background-position: 0 0;
+    }
+
+    to {
+        background-position: -500vw 0;
+    }
+}
